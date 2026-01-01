@@ -1,0 +1,50 @@
+
+
+
+/* Container for alignment */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+/* Button Styling */
+.turbine-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1px;
+  
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.turbine-button:active {
+  transform: scale(0.95);
+}
+
+
+/* THE ANIMATION MAGIC */
+.fan-group {
+  /* Set the pivot point to the middle of the group */
+  transform-origin: 50px 50px;
+  
+  /* Use linear timing so it doesn't "stutter" */
+  animation: spin 15s linear infinite;
+}
+
+/* Class applied on hover via React */
+.fan-group.fast {
+  animation-duration: 7s;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
