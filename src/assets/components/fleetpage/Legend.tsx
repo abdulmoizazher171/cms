@@ -24,4 +24,4 @@ const Legend = ({ status }: LegendProps) => {
   )
 }
 
-export default Legend
+export default Legend 
